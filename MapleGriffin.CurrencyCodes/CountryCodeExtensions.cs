@@ -5,9 +5,9 @@
         public static CurrencyCode Currency(this CountryCode countryCode)
         {
             if (!CountryCurrencyMapping.Map.TryGetValue(countryCode, out var currencyCode))
-                return currencyCode;
-
-            throw new NotSupportedException($"Missing currency for country code {countryCode}");
+                throw new NotSupportedException($"Missing currency for country code {countryCode}");
+            
+            return currencyCode;            
         }
 
         public static string Name(this CountryCode countryCode)
